@@ -1,0 +1,80 @@
+.header {
+  // padding: 2rem 4rem;
+  @include default-grid;
+  z-index: 2;
+  height: 7rem;
+
+  box-shadow: 0 1px $color-primary;
+  align-items: center;
+
+  // logo
+  &__logo-img {
+    width: 100%;
+    font-size: 2rem;
+    color: $color-gray-1;
+  }
+
+  .wraper {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: center;
+  }
+
+  // Search Input
+  &__search {
+    display: flex;
+    justify-content: center;
+
+    &-input {
+      width: 80%;
+      padding: 1rem 2rem;
+      border: $border-1;
+      border-radius: 2rem;
+      outline: none;
+      // margin-right: -4rem;
+      margin-left: -8rem;
+      transition: width 0.2s;
+
+      // placeholder
+      &::placeholder {
+        color: $color-primary;
+      }
+
+      &:focus {
+        width: 90%;
+      }
+    }
+
+    // &-icon {
+    // }
+  }
+
+  // User
+  &__user {
+    background-color: $color-gray-3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+
+    // user name
+    &-name {
+      font-size: 1.5rem; //1.2rem
+      color: $color-gray-2;
+    }
+
+    // user image
+    &-img {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    // SignIn & LogIn btns
+    .signin-login {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}

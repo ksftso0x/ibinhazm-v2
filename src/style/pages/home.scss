@@ -1,0 +1,98 @@
+#home {
+  @include default-grid;
+  overflow-x: hidden;
+  min-height: 100vh;
+
+  // grid-template-rows: repeat(3, min-content);
+}
+
+// HEADER
+.header {
+  background-color: $color-white;
+  grid-column: full-start/full-end;
+}
+
+// Navigation
+.navigation {
+  grid-column: nav-start/nav-end;
+}
+
+// Application
+.app {
+  // position: relative;
+  grid-column: app-start/app-end;
+  border: $border-1;
+  border-radius: $border-radius-5;
+  // width: 80%;
+
+  .recently__books {
+    display: grid;
+    grid-template-columns: repeat(5, min-content);
+    grid-template-columns: repeat(auto-fit, 12rem);
+    grid-gap: 1.5rem;
+  }
+}
+
+// Side bar
+.side-bar {
+  grid-column: side-start/side-end;
+}
+
+// FOOTER
+.footer {
+  grid-column: full-start/full-end;
+}
+
+// BUY or DOWNLOAD
+.buy {
+  width: 50rem;
+  background-color: white;
+  position: absolute;
+  top: 7rem;
+  right: 0;
+  transform: translateX(50rem);
+  transition: transform 0.3s ease;
+  min-height: calc(100vh - 7rem);
+}
+
+.message,
+.error {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 5rem 4rem;
+  display: flex;
+  align-items: center;
+
+  svg {
+    height: 3rem;
+    width: 3rem;
+    fill: $color-primary;
+    transform: translateY(-0.3rem);
+  }
+
+  p {
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  // padding: 1rem 0;
+
+  &__wrapper {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.bottom__wraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,54 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  transition: 0.1s ease;
+  padding: 0.5rem 0.8rem;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1);
+  }
+
+  &__close {
+    height: 6rem !important;
+    width: 6rem !important;
+    transform: rotate(45deg) scale(1.1) !important;
+
+    &:hover {
+      transform: rotate(45deg) scale(1.4) !important;
+      fill: red;
+    }
+  }
+
+  &__download {
+    background-color: $color-primary;
+    padding: 1.5rem 4rem;
+    color: $color-dark;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__pagination {
+    // display: flex;
+    padding: 0.5rem;
+    border-radius: $border-radius-5;
+    border: $border-1;
+  }
+
+  &__bookmark {
+    width: 5rem !important;
+    height: 5rem !important;
+    margin-right: 0.5rem;
+    fill: red;
+  }
+}

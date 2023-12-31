@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px; //1rem = 10px
+  font-family: "Robot", sans-serif;
+}
+
+body {
+  background-color: $color-bg;
+  max-width: 192rem;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+.icon {
+  height: 2rem;
+  width: 1.5rem;
+  margin-right: 0.8rem;
+  fill: $color-gray-2;
+}
+
+a {
+  text-decoration: none;
+}
